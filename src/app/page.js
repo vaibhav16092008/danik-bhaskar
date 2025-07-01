@@ -105,7 +105,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <>
       <Head>
         <title>दैनिक भास्कर - हिंदी न्यूज़, Latest News in Hindi</title>
         <meta
@@ -124,46 +124,34 @@ export default function Home() {
         />
       </Head>
 
-      <Navbar />
-
-      <div className="flex pt-16">
-        <Sidebar />
-
-        <main className="flex-1 lg:ml-64 xl:mr-72 p-4">
-          {/* Breaking News Section */}
-          <div className="bg-white rounded-lg shadow-md p-4 mb-6 border-l-4 border-red-600">
-            <div className="flex items-center mb-2">
-              <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded mr-2">
-                यार्ड रिपोर्ट
-              </span>
-              <span className="text-sm text-gray-500">ताज़ा अपडेट</span>
-            </div>
-            <h2 className="text-xl font-bold mb-2">{breakingNews[0].title}</h2>
-            <p className="text-gray-700 mb-3">{breakingNews[0].excerpt}</p>
-            <div className="flex justify-between items-center text-sm">
-              <span className="text-gray-500">
-                By {breakingNews[0].author} | {breakingNews[0].time}
-              </span>
-              <button className="text-red-600 font-medium">
-                पूरी खबर पढ़ें
-              </button>
-            </div>
+      <main className="flex-1 p-4">
+        {/* Breaking News Section */}
+        <div className="bg-white rounded-lg shadow-md p-4 mb-6 border-l-4 border-red-600">
+          <div className="flex items-center mb-2">
+            <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded mr-2">
+              यार्ड रिपोर्ट
+            </span>
+            <span className="text-sm text-gray-500">ताज़ा अपडेट</span>
           </div>
+          <h2 className="text-xl font-bold mb-2">{breakingNews[0].title}</h2>
+          <p className="text-gray-700 mb-3">{breakingNews[0].excerpt}</p>
+          <div className="flex justify-between items-center text-sm">
+            <span className="text-gray-500">
+              By {breakingNews[0].author} | {breakingNews[0].time}
+            </span>
+            <button className="text-red-600 font-medium">पूरी खबर पढ़ें</button>
+          </div>
+        </div>
 
-          {/* Featured News */}
-          <NewsSection title="फीचर्ड न्यूज़" newsItems={featuredNews} />
+        {/* Featured News */}
+        <NewsSection title="फीचर्ड न्यूज़" newsItems={featuredNews} />
 
-          {/* Politics News */}
-          <NewsSection title="राजनीति" newsItems={politicsNews} />
+        {/* Politics News */}
+        <NewsSection title="राजनीति" newsItems={politicsNews} />
 
-          {/* Crime News */}
-          <NewsSection title="क्राइम" newsItems={crimeNews} />
-        </main>
-
-        <RightSidebar />
-      </div>
-
-      <Footer />
-    </div>
+        {/* Crime News */}
+        <NewsSection title="क्राइम" newsItems={crimeNews} />
+      </main>
+    </>
   );
 }
