@@ -18,7 +18,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="w-64 bg-white shadow-md hidden lg:block fixed h-full overflow-y-auto">
+        <div className="w-64 bg-white shadow-md hidden lg:block  h-full overflow-y-auto">
             <div className="p-4">
                 <h3 className="font-bold text-lg mb-4 text-gray-800">श्रेणियाँ</h3>
                 <ul className="space-y-2">

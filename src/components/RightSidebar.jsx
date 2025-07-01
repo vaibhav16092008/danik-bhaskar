@@ -9,7 +9,7 @@ const RightSidebar = () => {
     ];
 
     return (
-        <div className="w-72 bg-white shadow-md hidden xl:block fixed right-0 h-full overflow-y-auto p-4">
+        <div className="w-72 bg-white shadow-md hidden xl:block h-full overflow-y-auto p-4">
             {/* Ad Banner */}
             <div className="mb-6 bg-gray-100 p-4 rounded-lg border border-gray-200 text-center">
                 <p className="text-xs text-gray-500 mb-2">ADVERTISEMENT</p>
