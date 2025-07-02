@@ -1,6 +1,6 @@
 const Sidebar = () => {
     const categories = [
-        { name: "टॉप न्यूज़", icon: "🔥" },
+        { name: "टॉप न्यूज़", icon: "🔥", path: "top-news" },
         { name: "भारत", icon: "🇮🇳" },
         { name: "राज्य", icon: "🏛️" },
         { name: "DB ओरिजिनल्स", icon: "⭐" },
@@ -18,13 +18,13 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="w-64 bg-white shadow-md hidden lg:block  h-full overflow-y-auto">
+        <div className="w-64 bg-white shadow-md hidden lg:block   h-full overflow-y-auto">
             <div className="p-4">
                 <h3 className="font-bold text-lg mb-4 text-gray-800">श्रेणियाँ</h3>
                 <ul className="space-y-2">
                     {categories.map((category, index) => (
                         <li key={index}>
-                            <a href="#" className="flex items-center p-2 rounded-lg hover:bg-gray-100">
+                            <a href={category.path} className="flex items-center p-2 rounded-lg hover:bg-gray-100">
                                 <span className="mr-3">{category.icon}</span>
                                 <span className="text-gray-700">{category.name}</span>
                             </a>
