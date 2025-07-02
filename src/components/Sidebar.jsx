@@ -1,33 +1,35 @@
+import Link from "next/link";
+
 const Sidebar = () => {
     const categories = [
-        { name: "टॉप न्यूज़", icon: "🔥", path: "top-news" },
-        { name: "भारत", icon: "🇮🇳" },
-        { name: "राज्य", icon: "🏛️" },
-        { name: "DB ओरिजिनल्स", icon: "⭐" },
-        { name: "क्राइम", icon: "🚨" },
-        { name: "राजनीति", icon: "🏛️" },
-        { name: "लाइफस्टाइल", icon: "🍽️" },
-        { name: "धर्म/मंत्र", icon: "🕉️" },
-        { name: "दुनिया", icon: "🌎" },
-        { name: "शिक्षा", icon: "📚" },
-        { name: "खेल", icon: "⚽" },
-        { name: "टेक्नोलॉजी", icon: "📱" },
-        { name: "मनोरंजन", icon: "🎬" },
-        { name: "ऑटो", icon: "🚗" },
-        { name: "बिज़नेस", icon: "💼" },
+        { name: "टॉप न्यूज़", icon: "🔥", path: "/top-news" },
+        { name: "भारत", icon: "🇮🇳", path: "/top-news" },
+        { name: "राज्य", icon: "🏛️", path: "/top-news" },
+        { name: "DB ओरिजिनल्स", icon: "⭐", path: "/top-news" },
+        { name: "क्राइम", icon: "🚨", path: "/top-news" },
+        { name: "राजनीति", icon: "🏛️", path: "/top-news" },
+        { name: "लाइफस्टाइल", icon: "🍽️", path: "/top-news" },
+        { name: "धर्म/मंत्र", icon: "🕉️", path: "/top-news" },
+        { name: "दुनिया", icon: "🌎", path: "/top-news" },
+        { name: "शिक्षा", icon: "📚", path: "/top-news" },
+        { name: "खेल", icon: "⚽", path: "/top-news" },
+        { name: "टेक्नोलॉजी", icon: "📱", path: "/top-news" },
+        { name: "मनोरंजन", icon: "🎬", path: "/top-news" },
+        { name: "ऑटो", icon: "🚗", path: "/top-news" },
+        { name: "बिज़नेस", icon: "💼", path: "/top-news" },
     ];
 
     return (
-        <div className="w-64 bg-white shadow-md hidden lg:block   h-full overflow-y-auto">
+        <div className="w-64 bg-white shadow-md hidden lg:block  h-full overflow-y-auto">
             <div className="p-4">
                 <h3 className="font-bold text-lg mb-4 text-gray-800">श्रेणियाँ</h3>
                 <ul className="space-y-2">
                     {categories.map((category, index) => (
                         <li key={index}>
-                            <a href={category.path} className="flex items-center p-2 rounded-lg hover:bg-gray-100">
+                            <Link href={category.path} className="flex items-center p-2 rounded-lg hover:bg-gray-100">
                                 <span className="mr-3">{category.icon}</span>
                                 <span className="text-gray-700">{category.name}</span>
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
